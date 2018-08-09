@@ -5,7 +5,7 @@
 %------------------------
 
 \title{Tanmay Binaykiya | 2 Page CV}
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -28,7 +28,7 @@
 \addtolength{\oddsidemargin}{-0.375in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-.25in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -64,10 +64,11 @@
 }
 
 \newcommand{\experienceTitle}[5]{
-  \vspace{-1pt}\item[]
+  \vspace{0pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & {\small#4} \\
        #3 & {\small #2} \\
+       \small{\textbf{Technologies Used:} #5} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -77,6 +78,13 @@
     \textbf{#1}, #2 & #4\\
     #3 & GPA:\ #5 \\
     \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\teachingExperienceRow}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small{#1} & \small{#2}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[3]{
@@ -135,19 +143,17 @@
 \section{Technical Skills}
  \resumeSubHeadingListStart
    \item{
-     \textbf{Languages:}{ Java, Python, Javascript, C}
-     \\
-     \textbf{Technologies:}{ AWS, Apache Spark, Docker}
+     \textbf{Languages:}{ Java, Python, Javascript, C} \\
+     \textbf{Technologies:}{ AWS, Docker, Spring Boot} \\ 
+     \textbf{Big Data Technologies:}{ Apache Spark, PyTorch, NumPy}
    }
  \resumeSubHeadingListEnd
-
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \experienceTitle
       {Uber Technologies}{Palo Alto, CA}
-      {Software Engineer Intern}{May 2018 - Present}
+      {Software Engineer Intern}{May 2018 - July 2018}
       {Apache Spark, Grafite, Docker, Java}
       \resumeItemListStart
         \resumeItem{MapCrunch Reliability}
@@ -155,7 +161,6 @@
         \resumeItem{Catch Map Errors (CatchME)}
         {Prototyped a Hidden Markov Model's emission probability-based algorithm to detect Map Errors using drivers' GPS traces}
       \resumeItemListEnd
-
     \experienceTitle
       {BlueJeans Networks}{Bangalore, INDIA}
       {Senior Software Engineer}{June 2016 - July 2017}
@@ -163,19 +168,18 @@
       \resumeItemListStart
         \resumeItem{Next Generation Platform}{}	
         \projectDetailListStart
-% 		\projectDetailItem{Redesigned and migrated the existing technology stack to Amazon Web Services Cloud}
+		\projectDetailItem{Redesigned and migrated the existing technology stack to Amazon Web Services Cloud}
         \projectDetailItem{Developed a Spring-Boot based software platform to facilitate deployment of existing monolith as microservices}
         \projectDetailItem{Improved system load capacity from 500 RPS to 100k RPS and uptime from .99 to .9999}
         \projectDetailListEnd
-        
         \resumeItem{Social Media Gateway}
           {Developed a AWS Lambda-based NodeJS solution to enable live streaming video conferences into RTMP entry points providing in-meeting Facebook Live broadcast capabilities achieving a time-to-market of \textbf{14 days}}
-%       \resumeItemListEnd  
-%     \experienceTitle
-%       {BlueJeans Networks}{Bangalore, INDIA}
-%       {Software Engineer}{May 2015 - June 2016}
-%       {AWS, Spring Cloud, Wowza, NodeJS, Java}
-%       \resumeItemListStart
+      \resumeItemListEnd  
+    \experienceTitle
+      {BlueJeans Networks}{Bangalore, INDIA}
+      {Software Engineer}{May 2015 - June 2016}
+      {AWS, Wowza, Java}
+      \resumeItemListStart
         \resumeItem{Autoscaler Service}
           {Developed a transcoder auto provisioning system based on real-time usage patterns reducing AWS usage costs by 55\% }
       \resumeItemListEnd  
@@ -188,28 +192,68 @@
       \vspace{-6pt}
         \projectDetailListStart
         \projectDetailItem{Developed a proof-of-concept to deploy the OnVideo stack on AWS EC2 using Kubernetes}
-%         \projectDetailItem{Developed a Web UI Automation framework to enable multi-browser, multi-node, multi-device concurrent testing}
+        \projectDetailItem{Developed a Web UI Automation framework to enable multi-browser, multi-node, multi-device concurrent testing}
         \projectDetailItem{Developed a stress testing framework to simulate peak loads}
         \projectDetailListEnd
         \resumeItemListEnd  
+
+    \experienceTitle
+      {National Aluminium Company Limited}{Bhubaneswar, INDIA}
+      {Software Development Intern}{May 2012 - Jul 2012}
+      {ASP.NET}
+
+    \experienceTitle
+      {Ojaswi Tech}{Pune, INDIA}
+      {Graphic Design Intern}{Jun 2011 - Aug 2011}
+      {Adobe Photoshop, Adobe Illustrator, Adobe After Effects}
+      \resumeItemListStart
+        \resumeItem{}{}
+        \vspace{-6pt}
+        \projectDetailListStart
+          \projectDetailItem{Developed UI mocks for a client websites and developed UI elements standards.}
+          \projectDetailItem{Developed Marketing Presentation Videos for clients}
+          \projectDetailListEnd
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+%-----------AWARDS & HONORS-----------------
+\section{Awards \& Honors}
+  \vspace{-2pt} \resumeSubHeadingListStart
+   \teachingExperienceRow {\textbf{Quarterly Award,} BlueJeans Networks}{July 2017}
+   \resumeSubHeadingListEnd
+   \vspace{0pt}
+
+%-----------TEACHING EXPERIENCE-----------------
+\section{Teaching Experience}
+   \textbf{Georgia Institute of Technology, Atlanta}
+   \vspace{-6pt} \resumeSubHeadingListStart
+   \teachingExperienceRow {CS 4510 Automata \& Computability}{Spring 2018}
+   \resumeSubHeadingListEnd
+   \textbf{Birla Institute of Technology \& Science, Pilani}
+   \vspace{-6pt} \resumeSubHeadingListStart
+   \teachingExperienceRow {Creative Multimedia}{Spring 2014}
+   \teachingExperienceRow {Computer Graphics}{Fall 2013}
+   \teachingExperienceRow {Computer Graphics}{Spring 2013}
+   \teachingExperienceRow {Human Computer Interaction}{Fall 2012}
+   \resumeSubHeadingListEnd
+   \vspace{0pt}
 
 %-----------PROJECTS-----------------
 \section{Academic Projects}
   \resumeSubHeadingListStart  	
-	\resumeSubItem{Coreference Resolution}{Apr 2018}{Built a coreference resolution pipeline using Attention-Based-LSTM}
-%     \resumeSubItem{Dependency Parser}{Apr 2018}{Built a }
+	\resumeSubItem{Coreference Resolution}{Apr 2018}{Built a coreference resolution pipeline using an Attention-Based-LSTM}
+    \resumeSubItem{Dependency Parser}{Apr 2018}{Built an arc-standard transition-based Dependency Parser}
 	\resumeSubItem{Sequence Labeling}{Mar 2018}{Implemented a Part-of-Speech tagger based on Hidden Markov model and BiLSTM - Conditional Random Field models}
 	\resumeSubItem{Text Classification}{Feb 2018}{Implemented lyrics classifiers based on Naive Bayes, Perceptron, Logistic Regression techniques}
     \resumeSubItem{Morse Code Recognition}{Dec 2017} {Implemented a Morse code recognition system through the use of Hidden Markov Models}
     \resumeSubItem{Scene Classification with Deep Learning}{Nov 2017}{Built a vanilla CNN and Transfer Learning based scene classification pipeline}
     \resumeSubItem{Face Detection}{Nov 2017} {Built a face detection pipeline based on Dalal \& Triggs’ method for pedestrian detection using HoG descriptor}
-%     \resumeSubItem{Surface Reconstruction from Point Cloud Data}{Nov 2017} {Water Tight Surface Reconstruction of 3D Point Cloud Data using the Ball Pivoting Algorithm}
-%     \resumeSubItem{Automatic Image Segmentation using Expectation Maximization}{Nov 2017} {Implemented Image segmentation using K-Means, Gaussian Mixture Models employing the Bayesian Information Criterion}
+    \resumeSubItem{Surface Reconstruction from Point Cloud Data}{Nov 2017} {Water Tight Surface Reconstruction of 3D Point Cloud Data using the Ball Pivoting Algorithm}
+    \resumeSubItem{Automatic Image Segmentation using Expectation Maximization}{Nov 2017} {Implemented Image segmentation using K-Means, Gaussian Mixture Models employing the Bayesian Information Criterion}
     \resumeSubItem{Dead-end Isolation Game AI}{Aug 2017} {Developed a dead-end isolation game player based on Minimax Algorithm using Alpha-Beta pruning}
     \resumeSubItem{Scene Recognition with Bag of Words}{Oct 2017} {Developed a scene recognition pipeline with Bag of SIFT and linear SVM classifier}
     \resumeSubItem{Local Feature Matching}{Sep 2017} {Developed a local feature matching algorithm implementing Harris Feature Point Detector and implemented a SIFT-like algorithm for a local feature descriptor}
   \resumeSubHeadingListEnd
-
 %-------------------------------------------
+
 \end{document}

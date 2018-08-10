@@ -17,7 +17,6 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 
-
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -44,6 +43,14 @@
 
 %-------------------------
 % Custom commands
+
+\newcommand{\headerSection}[4]{
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\href{#2}{\Large #1}} & \textbf{Email:} \href{mailto:#3}{#3}\\
+      \href{#2}{#2} & \textbf{Mobile:} #4 \\
+    \end{tabular*}
+}
+
 \newcommand{\resumeItem}[2]{  
   \vspace{-2pt}
   \item\small{
@@ -109,16 +116,11 @@
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://tanmaybinaykiya.github.io/}{\Large Tanmay Binaykiya}} & \textbf{Email:} \href{mailto:binaykiya.tanmay@gmail.com}{binaykiya.tanmay@gmail.com}\\
-  \href{https://tanmaybinaykiya.github.io/}{https://tanmaybinaykiya.github.io/} & \textbf{Mobile:} +1 404 697 3256 \\
-\end{tabular*}
-
+  \headerSection{Tanmay Binaykiya}{https://tanmaybinaykiya.github.io}
+  {binaykiya.tanmay@gmail.com}{+1 404 697 3256}
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -136,7 +138,7 @@
 %----------Classes ------------------
 
 \section{Graduate Courses}
-{\small Natural Language, Advanced Computer Vision, Artificial Intelligence, Computer Vision, Computer Graphics}
+{ Natural Language, Advanced Computer Vision, Artificial Intelligence, Computer Vision, Computer Graphics}
 
 
 %--------TECHNICAL SKILLS------------
@@ -252,7 +254,7 @@
     \resumeSubItem{Automatic Image Segmentation using Expectation Maximization}{Nov 2017} {Implemented Image segmentation using K-Means, Gaussian Mixture Models employing the Bayesian Information Criterion}
     \resumeSubItem{Dead-end Isolation Game AI}{Aug 2017} {Developed a dead-end isolation game player based on Minimax Algorithm using Alpha-Beta pruning}
     \resumeSubItem{Scene Recognition with Bag of Words}{Oct 2017} {Developed a scene recognition pipeline with Bag of SIFT and linear SVM classifier}
-    \resumeSubItem{Local Feature Matching}{Sep 2017} {Developed a local feature matching algorithm implementing Harris Feature Point Detector and implemented a SIFT-like algorithm for a local feature descriptor}
+    \resumeSubItem{Local Feature Matching}{Sep 2017} {Developed a local feature matching algorithm implementing Harris Feature Point Detector and implemented a SIFT-like local feature descriptor}
   \resumeSubHeadingListEnd
 %-------------------------------------------
 

@@ -1,0 +1,223 @@
+%-------------------------
+% Resume in Latex
+% Website: https://github.com/tanmaybinaykiya/resume
+% License : MIT
+%------------------------
+
+\title{Tanmay Binaykiya | Single Page CV}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand{\headerSection}[4]{
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\href{#2}{\Large #1}} & \textbf{Email:} \href{mailto:#3}{#3}\\
+      \href{#2}{#2} & \textbf{Mobile:} #4 \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeItem}[2]{  
+  \vspace{-2pt}
+  \item\small{
+    \textbf{#1} {\\ #2}
+  }
+}
+
+\newcommand{\projectDetailItem}[1]{
+ \hspace{5pt}
+  \item[-]\small{ #1 \vspace{-3pt} } 
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #3, \textbf{#1} & #4 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\company}[2]{
+  \vspace{0pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small#2}
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\jobTitle}[3]{
+  \vspace{0pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      {#1} & {\small #3}
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\educationRow}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}} c@{\extracolsep{\fill}}r}
+    #2, #1 & GPA:\ #4 & #3 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\teachingExperienceRow}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small{#1} & \small{#2}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[3]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & {\small#2}
+    \end{tabular*}
+    {\small#3}\vspace{-5pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={}, leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[label={}, leftmargin=10pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\projectDetailListStart}{\vspace{-13pt} \begin{itemize}[label={}, leftmargin=10pt]}
+\newcommand{\projectDetailListEnd}{\end{itemize}\vspace{-7pt} }
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING-----------------
+  \headerSection{Tanmay Binaykiya}{https://tanmaybinaykiya.github.io}
+  {binaykiya.tanmay@gmail.com}{+1 404 697 3256}
+
+%-----------EDUCATION-----------------
+\vspace{-3pt}
+
+\section{Education}
+  \resumeSubHeadingListStart
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}} l@{\extracolsep{\fill}} l@{\extracolsep{\fill}}r}
+    M.S. Computer Science & Georgia Institute of Technology, Atlanta & GPA:\ 4.0/4.0 & Aug 17 - Present \\
+    B.E. Computer Science & BITS Pilani, INDIA & GPA:\ 7.85/10.0 & Aug 09 - July 15
+    \end{tabular*}\vspace{-5pt}
+  \resumeSubHeadingListEnd
+
+%----------Classes ------------------
+
+\section{Graduate Courses}
+{ Natural Language, Advanced Computer Vision, Artificial Intelligence, Computer Vision, Computer Graphics}
+
+
+%--------TECHNICAL SKILLS------------
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+   \item{ \small{\textbf{Languages:}{ Java, Python, Javascript, C}}} \vspace{-8pt} 
+   \item{ \small{\textbf{Technologies:}{ AWS, Docker, Spring Boot}}} \vspace{-8pt} 
+   \item{ \small{\textbf{Big Data Technologies:}{ Apache Spark, PyTorch, NumPy}} }
+ \resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+      \company{Uber Technologies}{Palo Alto, CA}
+      \jobTitle{Software Engineer Intern}{Maps}{May 2018 - July 2018}
+      \projectDetailListStart
+        \projectDetailItem{Prototyped a HMM's emission probability-based algorithm to detect Map Errors using drivers' GPS traces}
+        \projectDetailItem{Developed a reliability framework for Apache Spark based map metrics computation pipeline}
+      \projectDetailListEnd
+
+      \company{Georgia Institute of Technology}{Atlanta}
+      \jobTitle{Graduate Teaching Assistant, CS 4510 Automata \& Computability}{Spring 2018}
+
+      \company{BlueJeans Networks}{Bangalore, INDIA}
+      \jobTitle{Senior Software Engineer}{Primetime Platform}{June 2016 - July 2017}
+        \projectDetailListStart
+        \projectDetailItem{Developed a Spring-Boot based software platform to facilitate deployment of existing monolith as microservices}
+        \projectDetailItem{Redesigned architecture resulting in a load capacity increase from 500 RPS to 100k RPS and uptime from .99 to .9999}
+        \projectDetailItem{Developed an AWS Lambda-based NodeJS solution to enable live streaming video conferences into RTMP entry points providing in-meeting Facebook Live broadcast capabilities achieving a time-to-market of \textbf{14 days}}
+        \projectDetailListEnd
+
+      \jobTitle{Software Engineer}{Primetime Platform}{Aug 2015 - May 2016}
+      \projectDetailListStart
+      \projectDetailItem{Developed a transcoder auto provisioning system based on real-time usage
+      patterns reducing AWS usage costs by 55\% }
+      \projectDetailListEnd
+
+      \jobTitle{Software Engineer Intern}{Primetime Platform}{Jul 2014 - May 2015}
+        \projectDetailListStart
+        \projectDetailItem{Developed a proof-of-concept to deploy the Primetime stack on AWS EC2 using Kubernetes}
+        \projectDetailItem{Developed tools for Web UI Automation and stress testing}
+        \projectDetailListEnd
+
+      \company{National Aluminium Company Limited}{Bhubaneswar, INDIA}
+      \jobTitle{Software Development Intern}{Computing Systems}{May 2012 - Jul 2012}
+
+      \company{Ojaswi Tech}{Pune, INDIA}
+      \jobTitle{Graphic Design Intern}{Design}{Jun 2011 - Aug 2011}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-7pt}
+\section{Academic Projects}
+  \resumeSubHeadingListStart  	
+	\resumeSubItem{Coreference Resolution}{Apr 2018}{Built a coreference resolution pipeline using an Attention-Based-LSTM}
+    % \resumeSubItem{Dependency Parser}{Apr 2018}{Built an arc-standard transition-based Dependency Parser}
+	\resumeSubItem{Sequence Labeling}{Mar 2018}{Implemented a Part-of-Speech tagger based on Hidden Markov Model and BiLSTM - Conditional Random Field models}
+% 	\resumeSubItem{Text Classification}{Feb 2018}{Implemented lyrics classifiers based on Naive Bayes, Perceptron, Logistic Regression techniques}
+    % \resumeSubItem{Morse Code Recognition}{Dec 2017} {Implemented a Morse code recognition system through the use of Hidden Markov Models}
+    \resumeSubItem{Scene Classification with Deep Learning}{Nov 2017}{Built a vanilla CNN and Transfer Learning based scene classification pipeline}
+    \resumeSubItem{Face Detection}{Nov 2017} {Built a face detection pipeline based on Dalal \& Triggs’ method for pedestrian detection using HoG descriptor}
+    % \resumeSubItem{Surface Reconstruction from Point Cloud Data}{Nov 2017} {Water Tight Surface Reconstruction of 3D Point Cloud Data using the Ball Pivoting Algorithm}
+    % \resumeSubItem{Automatic Image Segmentation using Expectation Maximization}{Nov 2017} {Implemented Image segmentation using K-Means, Gaussian Mixture Models employing the Bayesian Information Criterion}
+    % \resumeSubItem{Dead-end Isolation Game AI}{Aug 2017} {Developed a dead-end isolation game player based on Minimax Algorithm using Alpha-Beta pruning}
+    % \resumeSubItem{Scene Recognition with Bag of Words}{Oct 2017} {Developed a scene recognition pipeline with Bag of SIFT and linear SVM classifier}
+    \resumeSubItem{Local Feature Matching}{Sep 2017} {Built a local feature matching pipeline based on Harris Feature Point Detector and a SIFT-like local feature descriptor}
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS & HONORS-----------------
+\vspace{-7pt}
+\section{Awards \& Honors}
+  \vspace{-2pt} \resumeSubHeadingListStart
+   \teachingExperienceRow {\textbf{Quarterly Award,} BlueJeans Networks}{July 2017}
+   \resumeSubHeadingListEnd
+
+%-------------------------------------------
+
+
+\end{document}
